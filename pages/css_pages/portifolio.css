@@ -1,64 +1,55 @@
-body{
-  margin-left: 80px;
+h1 {
+   text-align: center;
+   margin: 20px auto;
 }
 
-h1{
-  text-align: center;
-  margin: 20px auto;
-}
-
-a{
-  text-decoration: none;
-  color: #8b949e;
+a {
+   text-decoration: none;
+   color: #8b949e;
+   font-size: 14px;
 }
 .home {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
 }
 
-.content-main{
-  margin: 0 auto;
+.content-main {
+   margin: 0 auto;
 }
 
-.content-main .project{
-  width: 700px;
-  border: 1px solid #30363d;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px;
+.content-main .project {
+   width: 600px;
+   border: 1px solid #30363d;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   padding: 20px;
+   border-radius: 8px;
+   margin: 20px;
 }
-.content-main .project div{
-  display: flex;
-  justify-content: space-between;
-}
-
-.content-main .project div .date-create{
-  color: #8b949e;
-  border: 1px solid #8b949e;
-  border-radius: 20px;
-  padding: 5px 10px;
-  font-size: 0.9rem;
+.content-main .project div {
+   display: flex;
+   justify-content: space-between;
 }
 
-.content-main .project div .title{
-  color: #00abf0;
+.content-main .project div .date-create {
+   color: #8b949e;
+   border: 1px solid #8b949e;
+   border-radius: 20px;
+   padding: 5px 10px;
+   font-size: 0.9rem;
 }
 
-.content-main .project div .circle{
-  background-color: #00abf0;
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 5px;
-  border: 1px solid #30363d;
-  border-radius: 50%;
+.content-main .project div .title {
+   color: #00abf0;
 }
 
-
-/*
-
-
-*/
+.content-main .project div .circle {
+   background-color: #00abf0;
+   display: inline-block;
+   width: 12px;
+   height: 12px;
+   margin-right: 5px;
+   border: 1px solid #30363d;
+   border-radius: 50%;
+}
