@@ -1,0 +1,40 @@
+.services {
+   margin-top: 50px;
+}
+
+.professional{
+  margin-top: 50px;
+}
+
+.title {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.city {
+   margin-left: -870px;
+   font-size: 12px;
+   color: #ccc;
+}
+
+.organization {
+   font-size: 25px;
+}
+
+.time {
+  color: #ccc;
+  font-size: 12px;
+}
+
+.line{
+  border-bottom: 1px solid #ccc;
+}
+
+.experience h4{
+  margin-top: 20px;
+}
+
+.experience li{
+  font-size: 12px;
+}
