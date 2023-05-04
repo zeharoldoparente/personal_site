@@ -1,0 +1,23 @@
+.thanks{
+   margin-top: 200px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+.text{
+   font-size: 50px;
+}
+.paragraph{
+   font-size: small;
+   margin-bottom: 35px;
+}
+
+.btn{
+   padding: 15px 55px;
+   background-color: #00abf0;
+   text-decoration: none;
+   color: #fff;
+   border-radius: 6px;
+   transition: all 0.5s;
+}
