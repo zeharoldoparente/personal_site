@@ -9,7 +9,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-         href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
          rel="stylesheet"
       />
       <link
@@ -23,67 +23,241 @@
       <div class="container">
          <header class="header">
             <a href="../index.html" class="logo"
-               ><img src="../images/logo-white.png"
+               ><img src="../images/logo-white.png" alt="Logo José Aroldo"
             /></a>
 
             <nav class="navbar">
                <a href="../index.html">Home</a>
                <a href="../pages/about.html">Sobre</a>
                <a href="../pages/services.html">Serviços</a>
-               <a href="../pages/portifolio.html">Portrifólio</a>
+               <a href="../pages/portifolio.html">Portfólio</a>
                <a href="../pages/contact.html" class="active">Contato</a>
             </nav>
          </header>
       </div>
-      <div class="container">
-         <h1>Entre em Contato</h1>
-         <p>*Campos obrigatórios</p>
-         <form
-            action="https://formsubmit.co/joseharoldoparente@gmail.com"
-            method="POST"
-         >
-            <input type="hidden" name="_captcha" value="false" />
-            <input
-               type="hidden"
-               name="_next"
-               value="https://site-pessoal-one-sandy.vercel.app/thanks.html"
-            />
 
-            <label for="name">*Nome:</label>
-            <input type="text" id="name" name="name" required />
+      <div class="container contact-container">
+         <div class="contact-header">
+            <h1>Entre em Contato</h1>
+            <p class="subtitle">
+               Ficarei feliz em conversar sobre novos projetos e oportunidades
+            </p>
+         </div>
 
-            <label for="Empresa">Empresa:</label>
-            <input type="empresa" id="empresa" name="empresa" />
+         <div class="contact-content">
+            <div class="contact-info">
+               <div>
+                  <h2>Informações de Contato</h2>
 
-            <label for="telefone">Telefone:</label>
-            <input
-               placeholder="(DDD) 9 9999-9999"
-               type="Telefone"
-               id="Telefone"
-               name="Telefone"
-            />
+                  <div class="info-item">
+                     <div class="info-icon">
+                        <i class="bx bx-envelope"></i>
+                     </div>
+                     <div class="info-content">
+                        <h3>Email</h3>
+                        <p>joseharoldoparente@gmail.com</p>
+                     </div>
+                  </div>
 
-            <label for="email">*Email:</label>
-            <input type="email" id="email" name="email" required />
+                  <div class="info-item">
+                     <div class="info-icon">
+                        <i class="bx bx-phone"></i>
+                     </div>
+                     <div class="info-content">
+                        <h3>Telefone</h3>
+                        <p>
+                           Entre em contato por email para agendar uma ligação
+                        </p>
+                     </div>
+                  </div>
 
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message"></textarea>
+                  <div class="info-item">
+                     <div class="info-icon">
+                        <i class="bx bx-map"></i>
+                     </div>
+                     <div class="info-content">
+                        <h3>Localização</h3>
+                        <p>Cuiabá - MT, Brasil</p>
+                     </div>
+                  </div>
+               </div>
 
-            <button type="submit">Enviar</button>
-         </form>
+               <div class="social-media">
+                  <h3>Me encontre nas redes sociais</h3>
+                  <div class="social-icons">
+                     <a
+                        href="https://www.facebook.com/haroldo.parente"
+                        target="_blank"
+                        class="social-icon"
+                        aria-label="Facebook"
+                     >
+                        <i class="bx bxl-facebook"></i>
+                     </a>
+                     <a
+                        href="https://www.instagram.com/haroldoparente/"
+                        target="_blank"
+                        class="social-icon"
+                        aria-label="Instagram"
+                     >
+                        <i class="bx bxl-instagram"></i>
+                     </a>
+                     <a
+                        href="https://www.linkedin.com/in/josearoldosoares/"
+                        target="_blank"
+                        class="social-icon"
+                        aria-label="LinkedIn"
+                     >
+                        <i class="bx bxl-linkedin"></i>
+                     </a>
+                     <a
+                        href="https://github.com/zeharoldoparente"
+                        target="_blank"
+                        class="social-icon"
+                        aria-label="GitHub"
+                     >
+                        <i class="bx bxl-github"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="contact-form-container">
+               <form
+                  class="contact-form"
+                  action="https://formsubmit.co/joseharoldoparente@gmail.com"
+                  method="POST"
+                  id="contact-form"
+               >
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input
+                     type="hidden"
+                     name="_next"
+                     value="https://site-pessoal-one-sandy.vercel.app/thanks.html"
+                  />
+
+                  <div class="form-group">
+                     <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                        placeholder=" "
+                        required
+                     />
+                     <label for="name" class="required">Nome</label>
+                  </div>
+
+                  <div class="form-group">
+                     <input
+                        type="text"
+                        id="empresa"
+                        name="empresa"
+                        class="form-control"
+                        placeholder=" "
+                     />
+                     <label for="empresa">Empresa</label>
+                  </div>
+
+                  <div class="form-group">
+                     <input
+                        type="tel"
+                        id="Telefone"
+                        name="Telefone"
+                        class="form-control"
+                        placeholder=" "
+                     />
+                     <label for="Telefone">Telefone</label>
+                  </div>
+
+                  <div class="form-group">
+                     <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        placeholder=" "
+                        required
+                     />
+                     <label for="email" class="required">Email</label>
+                  </div>
+
+                  <div class="form-group">
+                     <textarea
+                        id="message"
+                        name="message"
+                        class="form-control"
+                        placeholder=" "
+                     ></textarea>
+                     <label for="message">Mensagem</label>
+                  </div>
+
+                  <div class="form-footer">
+                     <p class="required-fields">* Campos obrigatórios</p>
+                     <button type="submit" class="submit-btn">
+                        <i class="bx bx-send"></i> Enviar mensagem
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </div>
       </div>
-      <script
-         type="text/javascript"
-         src="//code.jquery.com/jquery-1.11.0.min.js"
-      ></script>
-      <script
-         type="text/javascript"
-         src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-      ></script>
-      <script src="./js_pages/jquery.mask.min.js"></script>
+
+      <div class="background">
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="../pages/js_pages/jquery.mask.min.js"></script>
       <script>
          $(document).ready(function () {
             $("#Telefone").mask("(00) 0 0000-0000");
+
+            function isElementInViewport(el) {
+               const rect = el.getBoundingClientRect();
+               return (
+                  rect.top >= 0 &&
+                  rect.left >= 0 &&
+                  rect.bottom <=
+                     (window.innerHeight ||
+                        document.documentElement.clientHeight) &&
+                  rect.right <=
+                     (window.innerWidth || document.documentElement.clientWidth)
+               );
+            }
+
+            function animateElements() {
+               const elements = document.querySelectorAll(
+                  ".contact-header, .contact-info, .contact-form-container"
+               );
+               elements.forEach((element) => {
+                  if (
+                     isElementInViewport(element) &&
+                     !element.classList.contains("animate")
+                  ) {
+                     element.classList.add("animate");
+                  }
+               });
+            }
+
+            setTimeout(animateElements, 200);
+            window.addEventListener("scroll", animateElements);
+
+            $("#contact-form").on("submit", function (e) {
+               $(".submit-btn").addClass("sending");
+               $(".submit-btn").html(
+                  '<i class="bx bx-loader-alt bx-spin"></i> Enviando...'
+               );
+            });
          });
       </script>
    </body>

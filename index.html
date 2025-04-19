@@ -9,7 +9,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-         href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
          rel="stylesheet"
       />
       <link
@@ -17,24 +17,41 @@
          rel="stylesheet"
       />
       <link rel="icon" href="./images/icon.png" type="image/png" />
-      <title>José Aroldo</title>
+      <title>José Aroldo | Frontend Developer</title>
+
+      <!-- Meta tags para SEO e compartilhamento -->
+      <meta
+         name="description"
+         content="José Aroldo - Desenvolvedor Frontend especializado em criar experiências web modernas e atraentes."
+      />
+      <meta
+         name="keywords"
+         content="desenvolvedor frontend, web developer, HTML, CSS, JavaScript, React, Vue, portfolio"
+      />
+      <meta property="og:title" content="José Aroldo | Frontend Developer" />
+      <meta
+         property="og:description"
+         content="Portfolio profissional de José Aroldo - Desenvolvedor Frontend"
+      />
+      <meta property="og:type" content="website" />
    </head>
    <body>
       <div class="container">
          <header class="header">
-            <a href="./index.html" class="logo"
-               ><img src="./images/logo-white.png"
-            /></a>
+            <a href="./index.html" class="logo">
+               <img src="./images/logo-white.png" alt="Logo José Aroldo" />
+            </a>
 
             <nav class="navbar">
                <a href="./index.html" class="active">Home</a>
                <a href="./pages/about.html">Sobre</a>
                <a href="./pages/services.html">Serviços</a>
-               <a href="./pages/portifolio.html">Portrifólio</a>
+               <a href="./pages/portifolio.html">Portfólio</a>
                <a href="./pages/contact.html">Contato</a>
             </nav>
          </header>
       </div>
+
       <div class="container home">
          <div class="home-content">
             <h1>Olá, eu sou o José Aroldo</h1>
@@ -47,29 +64,61 @@
                Scrum, focado em entregas.
             </p>
             <div class="btn-box">
-               <a href="./pages/contact.html">Let's Talk</a>
+               <a href="./pages/contact.html">Vamos conversar</a>
+               <a href="./pages/portifolio.html">Meu portfólio</a>
             </div>
             <div class="home-sci">
                <a
                   href="https://www.facebook.com/haroldo.parente"
                   target="_blank"
+                  aria-label="Facebook"
                   ><i class="bx bxl-facebook"></i
                ></a>
                <a
                   href="https://www.instagram.com/haroldoparente/"
                   target="_blank"
+                  aria-label="Instagram"
                   ><i class="bx bxl-instagram-alt"></i
                ></a>
                <a
                   href="https://www.linkedin.com/in/josearoldosoares/"
                   target="_blank"
+                  aria-label="LinkedIn"
                   ><i class="bx bxl-linkedin"></i
                ></a>
             </div>
          </div>
          <div class="personal">
-            <img src="./images/rosto.jpg" />
+            <img src="./images/rosto.jpg" alt="José Aroldo" />
          </div>
       </div>
+
+      <!-- Animação do background -->
+      <div class="background">
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
+      </div>
+
+      <!-- Script para animação de digitação -->
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            // Adiciona classes para disparar as animações
+            document
+               .querySelectorAll(".home-content > *")
+               .forEach((element) => {
+                  element.classList.add("fade-in");
+               });
+
+            // Animação do fundo
+            const bgElements = document.querySelectorAll(".background span");
+            bgElements.forEach((element, index) => {
+               element.style.animationDelay = `${index * 0.3}s`;
+            });
+         });
+      </script>
    </body>
 </html>

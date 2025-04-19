@@ -1,23 +1,206 @@
-.thanks{
-   margin-top: 200px;
+.thanks-container {
+   height: 100vh;
    display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
-   flex-direction: column;
-}
-.text{
-   font-size: 50px;
-}
-.paragraph{
-   font-size: small;
-   margin-bottom: 35px;
+   text-align: center;
+   padding: 20px;
+   position: relative;
+   overflow: hidden;
+   background: linear-gradient(
+      135deg,
+      rgba(8, 27, 41, 0.95) 0%,
+      rgba(11, 63, 100, 0.9) 100%
+   );
 }
 
-.btn{
-   padding: 15px 55px;
-   background-color: #00abf0;
+.thanks-content {
+   max-width: 600px;
+   padding: 50px;
+   background: rgba(255, 255, 255, 0.05);
+   backdrop-filter: blur(10px);
+   border-radius: 20px;
+   border: 1px solid rgba(0, 171, 240, 0.2);
+   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+   animation: fadeIn 1s ease, float 4s ease-in-out infinite;
+   position: relative;
+   z-index: 2;
+}
+
+.thanks-icon {
+   width: 80px;
+   height: 80px;
+   background: var(--primary-color);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto 20px;
+   color: var(--secondary-color);
+   font-size: 40px;
+   box-shadow: 0 10px 25px rgba(0, 171, 240, 0.3);
+}
+
+.thanks-title {
+   font-size: 2.8rem;
+   font-weight: 700;
+   margin-bottom: 15px;
+   color: var(--text-color);
+   background: linear-gradient(45deg, #ffffff, #00abf0);
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.thanks-message {
+   font-size: 1.2rem;
+   margin-bottom: 30px;
+   color: #ccc;
+   line-height: 1.6;
+}
+
+.home-btn {
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   padding: 12px 30px;
+   background: transparent;
+   color: var(--primary-color);
+   border: 2px solid var(--primary-color);
+   border-radius: 8px;
+   font-size: 1rem;
+   font-weight: 600;
    text-decoration: none;
-   color: #fff;
-   border-radius: 6px;
-   transition: all 0.5s;
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+}
+
+.home-btn::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background: var(--primary-color);
+   z-index: -1;
+   transition: 0.5s;
+}
+
+.home-btn:hover {
+   color: var(--secondary-color);
+}
+
+.home-btn:hover::before {
+   width: 100%;
+}
+
+.circle {
+   position: absolute;
+   border-radius: 50%;
+   z-index: -1;
+   opacity: 0.4;
+}
+
+.circle-1 {
+   width: 300px;
+   height: 300px;
+   background: radial-gradient(#00abf0, transparent);
+   top: -100px;
+   left: -150px;
+   animation: pulse 8s infinite alternate;
+}
+
+.circle-2 {
+   width: 200px;
+   height: 200px;
+   background: radial-gradient(#00abf0, transparent);
+   bottom: -50px;
+   right: -50px;
+   animation: pulse 6s infinite alternate-reverse;
+}
+
+.particles {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   overflow: hidden;
+   z-index: 1;
+}
+
+.particle {
+   position: absolute;
+   display: block;
+   pointer-events: none;
+   width: 6px;
+   height: 6px;
+   background-color: rgba(0, 171, 240, 0.5);
+   border-radius: 50%;
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: translateY(30px);
+   }
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes float {
+   0%,
+   100% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(-10px);
+   }
+}
+
+@keyframes pulse {
+   0% {
+      transform: scale(1);
+      opacity: 0.3;
+   }
+   100% {
+      transform: scale(1.2);
+      opacity: 0.2;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .thanks-content {
+      padding: 30px;
+   }
+
+   .thanks-title {
+      font-size: 2.2rem;
+   }
+
+   .thanks-message {
+      font-size: 1rem;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .thanks-icon {
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+   }
+
+   .thanks-title {
+      font-size: 1.8rem;
+   }
+
+   .home-btn {
+      padding: 10px 25px;
+   }
 }

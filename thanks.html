@@ -9,7 +9,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-         href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
          rel="stylesheet"
       />
       <link
@@ -17,13 +17,78 @@
          rel="stylesheet"
       />
       <link rel="icon" href="./images/icon.png" type="image/png" />
-      <title>José Aroldo</title>
+      <title>José Aroldo - Mensagem Enviada</title>
    </head>
    <body>
-      <div class="container thanks">
-         <h1 class="text">Obrigado pelo contato</h1>
-         <p class="paragraph">Retornarei o mais breve possível ;)</p>
-         <a href="index.html" class="btn">Home</a>
+      <div class="container thanks-container">
+         <div class="circle circle-1"></div>
+         <div class="circle circle-2"></div>
+
+         <div class="particles" id="particles"></div>
+
+         <div class="thanks-content">
+            <div class="thanks-icon">
+               <i class="bx bx-check"></i>
+            </div>
+            <h1 class="thanks-title">Mensagem Enviada!</h1>
+            <p class="thanks-message">
+               Obrigado pelo seu contato. Retornarei o mais breve possível com
+               uma resposta. Enquanto isso, você pode explorar mais do meu
+               trabalho.
+            </p>
+            <a href="index.html" class="home-btn">
+               <i class="bx bx-home"></i> Voltar para Home
+            </a>
+         </div>
       </div>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            const particlesContainer = document.getElementById("particles");
+            const particlesCount = 20;
+
+            for (let i = 0; i < particlesCount; i++) {
+               createParticle();
+            }
+
+            function createParticle() {
+               const particle = document.createElement("span");
+               particle.className = "particle";
+
+               const posX = Math.random() * 100;
+               const posY = Math.random() * 100;
+               particle.style.left = `${posX}%`;
+               particle.style.top = `${posY}%`;
+
+               const size = Math.random() * 10 + 3;
+               particle.style.width = `${size}px`;
+               particle.style.height = `${size}px`;
+
+               const opacity = Math.random() * 0.5 + 0.2;
+               particle.style.opacity = opacity;
+
+               const duration = Math.random() * 20 + 10;
+               const delay = Math.random() * 5;
+
+               particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite alternate`;
+
+               particlesContainer.appendChild(particle);
+            }
+
+            const homeBtn = document.querySelector(".home-btn");
+            homeBtn.addEventListener("mouseenter", function () {
+               document.querySelectorAll(".particle").forEach((particle) => {
+                  particle.style.animationDuration = "4s";
+               });
+            });
+
+            homeBtn.addEventListener("mouseleave", function () {
+               document.querySelectorAll(".particle").forEach((particle) => {
+                  const duration = Math.random() * 20 + 10;
+                  particle.style.animationDuration = `${duration}s`;
+               });
+            });
+         });
+      </script>
    </body>
 </html>

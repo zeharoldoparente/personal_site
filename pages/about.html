@@ -9,7 +9,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-         href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
          rel="stylesheet"
       />
       <link
@@ -23,35 +23,140 @@
       <div class="container">
          <header class="header">
             <a href="../index.html" class="logo"
-               ><img src="../images/logo-white.png"
+               ><img src="../images/logo-white.png" alt="Logo José Aroldo"
             /></a>
 
             <nav class="navbar">
                <a href="../index.html">Home</a>
                <a href="../pages/about.html" class="active">Sobre</a>
                <a href="../pages/services.html">Serviços</a>
-               <a href="../pages/portifolio.html">Portrifólio</a>
+               <a href="../pages/portifolio.html">Portfólio</a>
                <a href="../pages/contact.html">Contato</a>
             </nav>
          </header>
       </div>
-      <div class="container about">
-         <div class="text">
-            <p>
-               Conhecimentos em desenvolvimento web com HTML, CSS, JavaScript,
-               Git/Github, Vue.js, PHP e Typescript, programação mobile com
-               dart/flutter. Expertise na construção de interfaces, comunicando com
-               APIs, automação de processos, conhecimento de banco de dados
-               SQLServer e ORACLE, bibliotecas como: jQuery, SASS, React.js,
-               Bootstrap.
-            </p>
-            <p>
-               Desenvolvimento e manipulação de interfaces e protótipos
-               com Figma e corelDRAW. Experiência com pacote OFFICE365 e ferramenta
-               de manipulação de informações para tomada de decisões bom PowerBI.
-            </p>
+
+      <div class="container about-container">
+         <div class="about-header">
+            <h1>Sobre Mim</h1>
+            <p class="subtitle">Conheça minhas habilidades e experiências</p>
          </div>
-         <img src="../images/logos.png" />
+
+         <div class="about-content">
+            <div class="about-text">
+               <div class="text-container">
+                  <p>
+                     Conhecimentos em desenvolvimento web com HTML, CSS,
+                     JavaScript, Git/Github, Vue.js, PHP e Typescript,
+                     programação mobile com dart/flutter. Expertise na
+                     construção de interfaces, comunicando com APIs, automação
+                     de processos, conhecimento de banco de dados SQLServer e
+                     ORACLE, bibliotecas como: jQuery, SASS, React.js,
+                     Bootstrap.
+                  </p>
+                  <p>
+                     Desenvolvimento e manipulação de interfaces e protótipos
+                     com Figma e corelDRAW. Experiência com pacote OFFICE365 e
+                     ferramenta de manipulação de informações para tomada de
+                     decisões com PowerBI.
+                  </p>
+               </div>
+
+               <div class="skills-container">
+                  <h2>Minhas Habilidades</h2>
+                  <div class="skills">
+                     <div class="skill-item">
+                        <div class="skill-name">HTML</div>
+                        <div class="skill-bar">
+                           <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                        <div class="skill-percent">90%</div>
+                     </div>
+
+                     <div class="skill-item">
+                        <div class="skill-name">CSS</div>
+                        <div class="skill-bar">
+                           <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                        <div class="skill-percent">85%</div>
+                     </div>
+
+                     <div class="skill-item">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="skill-bar">
+                           <div class="skill-level" style="width: 75%"></div>
+                        </div>
+                        <div class="skill-percent">75%</div>
+                     </div>
+
+                     <div class="skill-item">
+                        <div class="skill-name">Vue.js</div>
+                        <div class="skill-bar">
+                           <div class="skill-level" style="width: 70%"></div>
+                        </div>
+                        <div class="skill-percent">70%</div>
+                     </div>
+
+                     <div class="skill-item">
+                        <div class="skill-name">React</div>
+                        <div class="skill-bar">
+                           <div class="skill-level" style="width: 65%"></div>
+                        </div>
+                        <div class="skill-percent">65%</div>
+                     </div>
+
+                     <div class="skill-item">
+                        <div class="skill-name">Flutter</div>
+                        <div class="skill-bar">
+                           <div class="skill-level" style="width: 60%"></div>
+                        </div>
+                        <div class="skill-percent">60%</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="technologies-image">
+               <img src="../images/logos.png" alt="Tecnologias" />
+               <div class="experience-badge">
+                  <span class="years">3+</span>
+                  <span class="text">Anos de<br />Experiência</span>
+               </div>
+            </div>
+         </div>
       </div>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            const skillItems = document.querySelectorAll(".skill-item");
+
+            function isElementInViewport(el) {
+               const rect = el.getBoundingClientRect();
+               return (
+                  rect.top >= 0 &&
+                  rect.left >= 0 &&
+                  rect.bottom <=
+                     (window.innerHeight ||
+                        document.documentElement.clientHeight) &&
+                  rect.right <=
+                     (window.innerWidth || document.documentElement.clientWidth)
+               );
+            }
+
+            function animateVisibleSkills() {
+               skillItems.forEach((item) => {
+                  if (isElementInViewport(item)) {
+                     const skillLevel = item.querySelector(".skill-level");
+                     skillLevel.style.width = skillLevel.style.width;
+                     skillLevel.style.opacity = 1;
+                  }
+               });
+            }
+
+            setTimeout(animateVisibleSkills, 200);
+
+            window.addEventListener("scroll", animateVisibleSkills);
+         });
+      </script>
    </body>
 </html>

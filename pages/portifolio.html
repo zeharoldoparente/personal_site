@@ -9,7 +9,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-         href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
          rel="stylesheet"
       />
       <link
@@ -17,28 +17,62 @@
          rel="stylesheet"
       />
       <link rel="icon" href="../images/icon.png" type="image/png" />
-      <title>José Aroldo - Portifólio</title>
+      <title>José Aroldo - Portfólio</title>
    </head>
    <body>
       <div class="container">
          <header class="header">
             <a href="../index.html" class="logo"
-               ><img src="../images/logo-white.png"
+               ><img src="../images/logo-white.png" alt="Logo José Aroldo"
             /></a>
 
             <nav class="navbar">
                <a href="../index.html">Home</a>
                <a href="../pages/about.html">Sobre</a>
                <a href="../pages/services.html">Serviços</a>
-               <a href="../pages/portifolio.html" class="active">Portrifólio</a>
+               <a href="../pages/portifolio.html" class="active">Portfólio</a>
                <a href="../pages/contact.html">Contato</a>
             </nav>
          </header>
       </div>
-      <div class="container">
-         <h1>Meus Projetos no GitHub</h1>
-         <section class="home"></section>
-         <script src="./js_pages/portifolio.js"></script>
-      </div>
+
+      <style>
+         .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(0, 171, 240, 0.2);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            animation: spin 1s linear infinite;
+         }
+
+         @keyframes spin {
+            to {
+               transform: rotate(360deg);
+            }
+         }
+
+         .error-message {
+            background: rgba(255, 50, 50, 0.1);
+            border: 1px solid rgba(255, 50, 50, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+         }
+
+         .error-message i {
+            color: #ff5050;
+            font-size: 40px;
+         }
+      </style>
+
+      <script src="./js_pages/portifolio.js"></script>
    </body>
 </html>
